@@ -1,0 +1,1421 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap'); /* Import Lexend font */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap'); /* Import Patrick Hand font */
+/* Header styles */
+.header {
+    background-color: rgb(80, 44, 83); /* Dark purple background */
+    padding: 12px 15px;
+    padding-bottom: 10px;
+    position: fixed; /* Fix at top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* On top of other elements */
+    box-sizing: border-box;
+}
+
+/* Navbar flex container */
+.navbar {
+    display: flex; /* Arrange children horizontally */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space between logo, links, search */
+    margin-bottom: 2px;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Logo image */
+.logo {
+    height: 70px; /* Set logo height */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Search bar */
+.search-bar {
+    padding: 8px 12px;
+    font-size: 12px;
+    border-radius: 50px; /* Rounded edges */
+    outline: none; /* Remove outline on focus */
+    max-width: 200px;
+    width: 100%;
+}
+
+/* Navigation links container */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 6px 12px;
+    flex-wrap: wrap; /* Wrap on small screens */
+}
+
+/* Individual nav links */
+.nav-links a {
+    color: #ffffff;
+    font-family: 'Lexend', sans-serif;
+    text-decoration: none;
+}
+
+/* Active nav link highlight */
+.nav-links a.active {
+    background-color: #ffffff;
+    color: #3e203f;
+    padding: 2px 5px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 60px auto;
+    margin-bottom: 5px;
+    margin-top: 120px; /* Space below fixed header */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Subtle shadow */
+}
+
+/* Slide images */
+.mySlides img {
+    width: 100%;
+    height: auto;
+}
+
+/* Slides hidden by default */
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+    animation: fadeEffect 1s; /* Fade animation */
+}
+
+/* Previous and next buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 28px;
+    transition: 0.3s;
+    user-select: none;
+    background: rgba(232, 157, 255, 0.644); /* Semi-transparent background */
+    border-radius: 50%; /* Circular buttons */
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+/* Position next button to right */
+.next {
+    right: 10px;
+}
+
+/* Position prev button to left */
+.prev {
+    left: 10px;
+}
+
+/* Hover effect for buttons */
+.prev:hover, .next:hover {
+    background: rgba(255, 255, 255, 0.7); /* Light background on hover */
+}
+
+/* Hero section container */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+/* Hero background image */
+.hero-section .bg-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover container */
+    display: block;
+}
+
+/* Hero overlay text box */
+.hero-overlay {
+    position: absolute;
+    top: 340px;
+    right: 130px;
+    transform: translateY(-50%);
+    background-color: rgba(209, 205, 218, 0.85); /* Semi-transparent overlay */
+    border-radius: 20px;
+    padding: 20px 30px;
+    max-width: 450px;
+    height: 300px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25); /* Shadow */
+    padding-bottom: 40px;
+}
+
+/* Hero main title */
+.hero-overlay h1 {
+    font-family: 'Patrick Hand', sans-serif;
+    font-size: 65px;
+    font-weight: bolder;
+    color: rgb(73, 32, 77);
+    margin: 0 0 8px 0;
+    padding: 0;
+}
+
+/* Hero subtitle */
+.hero-overlay h2 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    color: rgb(73, 32, 77);
+    margin-top: 0;
+    margin-bottom: 5px;
+    
+}
+
+/* Hero paragraph */
+.hero-overlay p {
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    color: rgb(49, 21, 51);
+    margin-bottom: 20px;
+    margin: 0 0 0 20px;
+    max-width: 100%;
+}
+
+/* Hero button */
+.hero-btn {
+    background-color: rgb(102, 44, 119);
+    color: rgb(245, 238, 255);
+    padding: 8px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Patrick Hand';
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* Button shadow */
+}
+
+/* Background caption */
+.bg-caption {
+    font-family: 'Lexend', sans-serif;
+    font-size: 20px;
+    color: rgb(72, 32, 77);
+    margin: 10px auto;
+    top: 0;
+    text-align: center;
+    text-indent: 0;
+}
+
+/* Content main heading */
+.content h1 {
+    font-family: 'Patrick Hand', sans-serif;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    font-size: 60px;
+    text-align: center;
+    -webkit-text-stroke: 1px; /* Text stroke effect */
+    color: rgb(72, 32, 77);
+    margin-bottom: 1px;
+}
+
+/* Paragraphs inside content */
+.content p, p {
+    font-family: 'Lexend', sans-serif;
+    margin: 0 100px;
+    text-align: justify;
+    text-indent: 60px; /* Indent first line */
+    font-size: 20px;
+    color: #221429;
+}
+
+/*Ordered lists inside content */
+.address li {
+    font-family: 'Lexend', sans-serif;
+    margin-left: 175px;
+    text-align: justify;
+    font-size: 20px;
+    color: #221429;
+}
+
+/* Wrapper for content */
+.content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+/* Table styles */
+table {
+    width: 50%;
+    height: fit-content;
+    margin: 10px 0 auto 100px;
+    border-collapse: separate; 
+    border-spacing: 0;
+    font-family: 'Lexend', sans-serif;
+    font-size: 25px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #f3ecf9;
+    border: 2px solid rgb(86, 64, 92);
+}
+
+/* Table cells */
+th, td {
+    padding: 12px;
+    text-align: left;
+    color: #4d3750;
+    border: 1px solid rgb(86, 64, 92);
+    font-family: 'Lexend', sans-serif;
+    font-size: 18px;
+}
+
+/* Table header first column */
+th:nth-child(1) {
+    background-color: #6a4b72;
+    color: #fcf8ff;
+    font-size: larger;
+}
+
+/* Table header second column */
+th:nth-child(2) {
+    background-color: #694b72;
+    color: #fcf8ff;
+    font-size: larger;
+}
+
+/* Highlight yellow text */
+.highlight-yellow {
+    background-color: #ffee57cb;
+    font-weight: bold;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* Stats section layout */
+.stats1 {
+    display: flex; /* Horizontal layout */
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 115px;
+    max-width: 1000px;
+    text-align: center;
+}
+
+/* Stats table width */
+.stats-table table {
+    width: 500px;
+    font-size: 14px;
+}
+
+
+    /* Stats image styling */
+    .stats-image img {
+    max-height: 350px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.596);
+    }
+
+    /* Where section container */
+.where-section {
+    display: flex; /* Horizontal layout */
+    align-items: stretch; /* Stretch items vertically */
+    justify-content: center; /* Center horizontally */
+    gap: 30px; /* Space between items */
+    margin: 20px auto; /* Center section with vertical margin */
+    width: 1200px;
+    height: 360px; 
+}
+
+/* Slideshow side */
+.where-slideshow {
+    flex: 1; /* Take available space */
+    position: relative; /* For positioning buttons */
+    margin-right: 0;
+}
+
+/* Individual slides */
+.where-slide {
+    display: none; /* Hidden by default */
+    width: 500px;
+    height: 360px;
+}
+
+/* Active slide */
+.where-slide.active {
+    display: block; /* Show active slide */
+}
+
+/* Slide image styling */
+.where-slide img {
+    width: 100%; /* Full width of container */
+    height: 100%; /* Full height of container */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.534); /* Shadow effect */
+}
+
+/* Text side */
+.where-text {
+    flex: 1.5; /* Take more space than slideshow */
+    background-color: #fce3ff; /* Light pink background */
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.534);
+    text-align: left;
+    max-width: 800px;
+    height: 318px;
+    overflow-y: auto; /* Scroll if content overflows */
+    padding: 20px;
+}
+
+/* Text headings inside where-text */
+.where-text h2 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 35px;
+    color: rgb(68, 32, 77);
+    margin-bottom: 12px;
+    margin-left: 40px;
+}
+
+/* Paragraphs inside where-text */
+.where-text p {
+    font-family: 'Lexend', sans-serif;
+    font-size: 21px;
+    color: #241429;
+    margin-bottom: 20px;
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+/* Slide text hidden by default */
+.where-slide-text {
+    display: none; /* Hide text initially */
+}
+
+/* Active slide text shown */
+.where-slide-text.active {
+    display: block; /* Show active slide text */
+}
+
+/* Next button for slide text */
+.where-next {
+    background-color: rgba(66, 11, 83, 0.644); /* Semi-transparent purple */
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* Circular button */
+    width: 55px;
+    height: 55px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex; /* Center icon/text */
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto; /* Center horizontally with margin */
+    transition: background 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Shadow */
+}
+
+/* Hover effect for text next button */
+.where-next:hover {
+    background: rgba(255, 255, 255, 0.7); /* Light background */
+    color: #241429; /* Text color change */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .where-section {
+        flex-direction: column; /* Stack vertically */
+    }
+    .where-text {
+        text-align: center; /* Center text on small screens */
+    }
+}
+
+/* Prev and next buttons for image slides */
+.where-prev,
+.where-next-img {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    padding: 12px;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+    user-select: none; /* Prevent text selection */
+    background: rgba(182, 119, 207, 0.4);
+    border-radius: 50%;
+    text-decoration: none;
+    width: 20px;
+    height: 20px;
+    line-height: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10; /* On top */
+}
+
+/* Position prev and next */
+.where-prev { left: 10px; } /* Left side */
+.where-next-img { right: 10px; } /* Right side */
+
+/* Hover effect */
+.where-prev:hover,
+.where-next-img:hover {
+    background: rgba(37, 0, 44, 0.7); /* Darker background on hover */
+}
+
+/* CTA boxes container */
+.cta-boxes {
+    display: flex; /* Horizontal layout */
+    justify-content: center; /* Center boxes */
+    max-width: 1000px;
+    margin: 60px auto; /* Center container with margin */
+    padding: 0 30px;
+    right: 60px;
+    gap: 30px; /* Space between boxes */
+}
+
+/* Individual CTA box */
+.cta-box {
+    flex: 1; /* Equal width */
+    background: #4f2053; /* Dark purple */
+    padding: 10px 10px;
+    width: 200px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Animate hover */
+    overflow: hidden;
+    height: 100%;
+}
+
+/* Hover effect for CTA box */
+.cta-box:hover {
+    transform: translateY(-8px); /* Lift on hover */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Bigger shadow */
+}
+
+/* CTA box heading */
+.cta-box h3 {
+    font-size: 50px;
+    font-family: 'Patrick Hand', sans-serif;
+    color: rgb(255, 255, 255);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* CTA box paragraph */
+.cta-box p {
+    font-size: 12px;
+    font-family: 'Lexend', sans-serif; 
+    color: #ffffff;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-indent: 0;
+    text-align: center;
+    padding-bottom: 0;
+}
+
+/* CTA link wrapper */
+.cta-link {
+    text-decoration: none;
+    color: inherit;
+    flex: 1;
+}
+
+/* CTA button */
+.cta-btn {
+    background-color: rgb(84, 26, 102); /* Purple button */
+    color: rgb(255, 255, 255);
+    padding: 8px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Patrick Hand';
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    text-align: center;
+    display: block;
+    margin: 20px auto 0 auto; /* Center horizontally */
+    max-width: fit-content;
+}
+
+/* CTA impact section */
+.cta-impact {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1000px;
+    align-items: center;
+}
+
+/* Help text paragraph */
+.help-text p {
+    text-align: center; 
+    margin: 10px 0; 
+    line-height: 1.6;
+    border: none;
+    padding-left: 0;
+    padding-right: 25px;
+}
+
+/* Help text container */
+.help-text {
+    text-align: center; 
+    margin: 0 auto;
+    line-height: 1.6;
+    max-width: 1000px;
+    display: inline-block;
+    padding: 10px 20px;
+    padding-left: 0;
+}
+
+/* Strong text inside help-text */
+.help-text strong {
+    text-indent: 0;
+}
+
+/* Footer styles */
+.site-footer {
+    background-color: #3e203f; /* Dark purple */
+    color: #f3ecf9; /* Light text */
+    padding: 50px 80px 20px 80px;
+    font-family: 'Lexend', sans-serif;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-top: 80px;
+}
+
+/* Footer content layout */
+.footer-content {
+    display: flex; /* Horizontal layout */
+    justify-content: space-between; /* Space between items */
+    flex-wrap: wrap; /* Wrap on small screens */
+    gap: 40px;
+}
+
+/* Footer brand section */
+.footer-brand {
+    flex: 1.2; /* Take more space */
+    max-width: 350px;
+}
+
+/* Footer logo */
+.footer-logo {
+    height: 60px; /* Logo height */
+    margin-bottom: 15px;
+}
+
+    /* Footer brand paragraph */
+.footer-brand p {
+    font-size: 14px; /* Text size */
+    line-height: 1.6; /* Space between lines */
+    color: #e6dff0; /* Light text color */
+    margin-bottom: 20px; /* Space below */
+    text-indent: 0; /* No indent */
+    margin: 0 0 20px 0; /* Override margin */
+    padding-left: 0; /* No left padding */
+    text-align: left; /* Align text left */
+}
+
+/* Footer social icons container */
+.social-icons {
+    display: flex; /* Horizontal layout */
+    align-items: center; /* Center vertically */
+    gap: 12px; /* Space between icons */
+}
+
+/* Individual social icon link */
+.social-icons a {
+    margin-right: 12px; /* Space after each icon */
+    display: inline-block; /* Inline block for spacing */
+}
+
+/* Social icon images */
+.social-icons img {
+    width: 22px;
+    height: 22px;
+    filter: invert(90%) sepia(10%) saturate(200%) hue-rotate(250deg); /* Color adjustment */
+    transition: 0.3s; /* Smooth hover */
+}
+
+/* Hover effect for social icons */
+.social-icons img:hover {
+    filter: invert(100%); /* Full invert on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Footer links and legal sections */
+.footer-links,
+.footer-legal {
+    flex: 1; /* Take available space */
+    min-width: 200px; /* Minimum width */
+}
+
+/* Footer section headings */
+.footer-links h4,
+.footer-legal h4 {
+    font-size: 16px; /* Text size */
+    font-weight: bold; /* Bold heading */
+    margin-bottom: 12px; /* Space below */
+    color: #ffee57; /* Yellow heading */
+}
+
+/* Footer links */
+.footer-links a,
+.footer-legal a {
+    display: block; /* Stack links vertically */
+    color: #f3ecf9; /* Light color */
+    text-decoration: none; /* Remove underline */
+    margin-bottom: 8px; /* Space below link */
+    font-size: 14px;
+    transition: 0.3s; /* Smooth hover */
+}
+
+/* Footer links hover effect */
+.footer-links a:hover,
+.footer-legal a:hover {
+    color: #ffee57; /* Yellow on hover */
+}
+
+/* Footer bottom row */
+.footer-bottom {
+    margin-top: 40px; /* Space above */
+    padding-top: 15px; /* Padding on top */
+    border-top: 1px solid #7a5a8d; /* Top border */
+    display: flex; /* Horizontal layout */
+    justify-content: space-between; /* Space between items */
+    flex-wrap: wrap; /* Wrap items on small screens */
+    font-size: 13px;
+    color: #d9c9e6;
+}
+
+/* Footer bottom text */
+.footer-bottom p {
+    color: #f3ecf9; /* Light text */
+}
+
+/* Back to top link */
+.back-to-top {
+    color: #ffee57; /* Yellow text */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    transition: 0.3s; /* Smooth hover */
+}
+
+/* Hover effect for back-to-top */
+.back-to-top:hover {
+    color: #fff; /* White on hover */
+}
+
+/* Story Slideshow Section */
+.story-slideshow-section {
+    margin: 60px auto; /* Center section with margin */
+    max-width: 1000px;
+    text-align: center; /* Center text */
+}
+
+/* Story section heading */
+.story-slideshow-section h1 {
+    font-family: 'Patrick Hand', sans-serif;
+    font-size: 50px;
+    color: rgb(72, 32, 77);
+    margin-top: 0;
+}
+
+/* Slideshow container */
+.story-slideshow-container {
+    position: relative; /* For navigation arrows */
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Individual slides */
+.story-slide {
+    display: none; /* Hide slides initially */
+    position: relative;
+}
+
+/* Slide images */
+.story-slide img {
+    width: 100%; /* Full container width */
+    border-radius: 15px; /* Rounded corners */
+}
+
+/* Overlay box */
+.story-overlay {
+    position: absolute; /* Position over slide */
+    top: 50%;
+    transform: translateY(-50%); /* Vertical center */
+    background: rgba(255, 255, 255, 0.836); /* Semi-transparent white */
+    border-radius: 15px;
+    padding: 10px 12px;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Shadow */
+}
+
+/* Centered overlay */
+.story-overlay.center {
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+    text-align: center;
+    max-height: 300px;
+}
+
+/* Left overlay */
+.story-overlay.left {
+    left: 30px;
+    transform: translateY(-50%);
+    text-align: left;
+    max-width: 300px;
+}
+
+/* Right overlay */
+.story-overlay.right {
+    right: 20px;
+    transform: translateY(-50%);
+    text-align: right;
+    max-width: 350px;
+}
+
+/* Overlay text headings */
+.story-overlay h2 {
+    font-family: 'Patrick Hand', sans-serif;
+    font-size: 35px;
+    color: rgb(68, 32, 77);
+    margin-bottom: 10px;
+    line-height: 30px;
+    margin-top: 5px;
+}
+
+/* Overlay subheading */
+.story-overlay h3 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 20px;
+    color: rgb(68, 32, 77);
+    margin-top: 5px;
+    margin-bottom: 2px;
+    line-height: 20px;
+}
+
+/* Overlay paragraph text */
+.story-overlay p {
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    color: #241429;
+    margin: 10px 10px;
+    text-indent: 0;
+}
+
+/* Navigation arrows */
+.story-prev, .story-next {
+    cursor: pointer; /* Pointer on hover */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Vertical center */
+    font-size: 30px;
+    color: white;
+    background: rgba(232, 157, 255, 0.644); /* Semi-transparent purple */
+    padding: 10px;
+    border-radius: 50%;
+    user-select: none; /* Prevent text selection */
+    width: 40px;
+    height: 40px;
+}
+
+/* Arrow positions */
+.story-prev { left: 10px; } /* Left arrow */
+.story-next { right: 10px; } /* Right arrow */
+
+/* Arrow hover effect */
+.story-prev:hover, .story-next:hover {
+    background: rgba(102, 44, 119, 0.9); /* Darker on hover */
+}
+
+/* Who section spacing */
+.who {
+    margin-top: 150px;
+}
+
+.who h1 {
+    margin-top: 75px;
+}
+
+.who p {
+    margin-bottom: 10px;
+}
+
+/* Header: profile beside name */
+.about-header {
+    display: flex; /* Horizontal layout */
+    align-items: center; /* Center vertically */
+    gap: 15px; /* Space between image and text */
+    margin-bottom: 10px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Profile picture */
+.profile-pic {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%; /* Circle */
+    object-fit: cover; /* Crop to fit */
+    flex-shrink: 0;
+}
+
+/* Name text */
+.about-header-text .name {
+    font-family: 'Patrick Hand', sans-serif;
+    font-size: 40px;
+    color: #4a2050;
+    margin: 0;
+}
+
+/* Role text */
+.about-header-text .role {
+    font-family: 'Lexend', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    color: #6a4b72;
+    margin: 0;
+}
+
+/* About text container */
+.about-text {
+    font-family: 'Lexend', sans-serif;
+    font-size: 18px;
+    color: #241429;
+    text-align: justify;
+    max-width: 1000px;
+    flex: 1; /* Take remaining space */
+    overflow-y: auto; /* Scroll if text overflows */
+    padding-right: 8px;
+}
+
+/* Paragraphs inside about text */
+.about-text p {
+    margin: 0;
+    text-indent: 0;
+    margin-top: 5px;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+/* Lists inside about text */
+.about-text ul {
+    margin: 10px 0 0 16px;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+/* List items */
+.about-text li {
+    margin-bottom: 2px;
+    margin-left: 5px;
+}
+
+/* Right column caption */
+.about-right .caption {
+    font-family: 'Patrick Hand', sans-serif;
+    font-size: 26px;
+    color: #4a2050;
+    margin-bottom: 15px;
+}
+
+   /* Responsive adjustments for smaller screens */
+@media (max-width: 900px) {
+    .about-me {
+        flex-direction: column; /* Stack left and right sections */
+        align-items: center; /* Center horizontally */
+    }
+
+    .about-left, .about-right {
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+/* About box container */
+.about-box {
+    background: #ffe2ff; /* Light pink background */
+    border-radius: 16px; /* Rounded corners */
+    padding: 16px; /* Inner spacing */
+    width: 100%;
+    max-height: 400px; /* Restrict height */
+    overflow-y: auto; /* Scroll if content overflows */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.61); /* Shadow */
+    display: flex; 
+    flex-direction: column; /* Stack header + text */
+}
+
+/* Passion slideshow container */
+.passion-slideshow-container {
+    position: relative; /* For navigation buttons */
+    width: 100%;
+    margin: 0;
+    margin-top: 40px; /* Space above */
+    border-radius: 12px; 
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* Shadow */
+}
+
+/* Individual slides in passion slideshow */
+.passion-slide {
+    display: none; /* Hide by default */
+}
+
+/* Images inside passion slides */
+.passion-slide img {
+    width: 100%; 
+    height: auto; 
+    display: block;
+    border-radius: 12px; 
+}
+
+
+/* Navigation buttons for all slideshows */
+.prev, .next,
+.story-prev, .story-next,
+.passion-prev, .passion-next {
+    cursor: pointer;
+    position: absolute; /* Overlay on slides */
+    top: 50%; /* Vertical center */
+    left: auto;
+    right: auto;
+    transform: translateY(-50%); /* Center vertically */
+    display: flex; /* Perfect centering */
+    align-items: center;
+    justify-content: center;
+
+    width: 45px; /* Button size */
+    height: 45px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+
+    background: rgba(232, 157, 255, 0.7); /* Semi-transparent purple */
+    border-radius: 50%; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+    user-select: none; /* Prevent text selection */
+    transition: background 0.3s; /* Smooth hover */
+}
+
+/* Left button positions */
+.prev, .story-prev, .passion-prev {
+    left: 10px;
+}
+
+/* Right button positions */
+.next, .story-next, .passion-next {
+    right: 10px;
+}
+
+/* Hover effect for navigation buttons */
+.prev:hover, .next:hover,
+.story-prev:hover, .story-next:hover,
+.passion-prev:hover, .passion-next:hover {
+    background: rgba(102, 44, 119, 0.9); /* Darker on hover */
+}
+
+/* Caption under slideshow */
+.about-right .caption {
+    font-family: 'Patrick Hand', sans-serif;
+    font-size: 30px;
+    color: #4a2050;
+    text-align: center; 
+    margin-top: 0;
+}
+
+/* Main about section layout */
+.about-me {
+    display: flex;
+    align-items: flex-start; /* Align top */
+    gap: 60px; /* Space between left and right */
+    margin: 30px auto;
+    max-width: 1125px;
+    padding: 0 20px;
+}
+
+/* Left column */
+.about-left {
+    flex: 1; /* Take proportional width */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Right column */
+.about-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 700px;
+    align-items: center;
+}
+
+/* Achievements card container */
+.achievements-box {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin: 8px;
+    cursor: pointer;
+    perspective: 1000px; /* For 3D flip */
+    min-height: 350px;
+    padding: 5px;
+    margin-left: 25px;
+}
+
+/* Achievements front and back faces */
+.achievements-cover,
+.achievements-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 450px;
+    height: 100%;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    transition: transform 0.6s; /* Smooth flip */
+    backface-visibility: hidden; /* Hide backside when flipped */
+    text-align: center;
+    margin: 0   
+}
+
+/* Achievements front */
+.achievements-cover {
+    background: linear-gradient(135deg, #662c77, #e89dff);
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+/* Achievements back */
+.achievements-content {
+    background: white;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transform: rotateY(180deg); /* Hidden initially */
+    font-size: 18px;
+    padding-top: 0;
+}
+
+/* Achievements list */
+.achievements-content ul {
+    list-style: disc;
+    padding: 10px;
+    text-align: left;
+}
+
+.achievements-content li {
+    width: 100%;
+}
+
+/* Flipped state */
+.achievements-box.flipped .achievements-cover {
+    transform: rotateY(180deg);
+}
+
+.achievements-box.flipped .achievements-content {
+    transform: rotateY(0deg);
+}
+
+/* Recommended links section */
+.recommended-links {
+    padding: 2rem;
+    background: #f9f9f9;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+/* Recommended section heading */
+.recommended-links h2 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+/* Container for link cards */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Individual link card */
+.link-card {
+    display: grid;
+    grid-template-columns: 80px 1fr 150px; /* logo | info | action */
+    align-items: center;
+    background: #fff;
+    margin: 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.534);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    max-width: 750px;
+    padding: 15px;
+}
+
+/* Hover effect for link card */
+.link-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.534);
+}
+
+/* Logo inside link card */
+.link-logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-left: 0;
+}
+
+/* Info section inside link card */
+.link-info {
+    max-width: 700px;
+}
+
+/* Link title */
+.link-info h3 {
+    font-size: 30px;
+    margin: auto 0 55px auto;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    font-family: 'Patrick Hand', sans-serif;
+    color: rgb(49, 21, 51);
+    line-height: 0.9;
+}
+
+/* Link description */
+.link-info p {
+    font-size: 20px;
+    color: rgb(48, 32, 49);
+    margin: auto 55px;
+    font-family: "Lexend", sans-serif;
+    text-indent: 0;
+}
+
+/* Link action button */
+.link-action a {
+    display: inline-block;
+    padding: 8px 13px;
+    background: #460f57;
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    margin-left: 20px;
+}
+
+/* Hover effect for action button */
+.link-action a:hover {
+    background: #e39dff;
+    color: #460f57;
+}
+
+/* About pictures slideshow */
+.about-pics {
+    position: relative;
+    max-width: 800px;
+    margin: 30px auto;
+    margin-top: 60px; /* Space below fixed header */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Subtle shadow */
+}
+
+/* Images inside the about-pic slideshow */
+.about-pic img {
+    width: 100%; /* Full container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Our story main heading spacing */
+.our-story h1 {
+    margin-top: 5px; /* Small spacing above */
+    margin-bottom: 0; /* Remove default bottom margin */
+}
+
+/* Slides hidden by default */
+.about-pic {
+    display: none; /* Hide slides initially */
+    width: 100%;
+    height: 100%;
+    animation: fadeEffect 1s; /* Smooth fade in/out */
+}
+
+/* Previous and next slideshow buttons */
+.prev, .next {
+    cursor: pointer; /* Pointer on hover */
+    position: absolute; /* Overlay on slides */
+    top: 50%; /* Vertically centered */
+    transform: translateY(-50%); /* Correct centering */
+    padding: 12px;
+    color: rgb(255, 255, 255); /* White text */
+    font-weight: bold;
+    font-size: 28px;
+    transition: 0.3s; /* Smooth hover effect */
+    user-select: none; /* Prevent text selection */
+    background: rgba(232, 157, 255, 0.644); /* Semi-transparent purple */
+    border-radius: 50%; /* Circular shape */
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+/* Position next button to the right */
+.next {
+    right: 10px;
+}
+
+/* Position previous button to the left */
+.prev {
+    left: 10px;
+}
+
+/* Hover effect for navigation buttons */
+.prev:hover, .next:hover {
+    background: rgba(255, 255, 255, 0.7); /* Light background on hover */
+    color: #221429; /* Dark text on hover */
+}
+
+/* Story section container */
+.story-section {
+    max-width: 1125px; /* Limit width */
+    margin: 10px auto; /* Center horizontally */
+}
+
+.our-story h1 {
+    margin-bottom: 0;
+}
+
+/* Paragraph spacing for story */
+.our-story p {
+    margin-bottom: 10px;
+}
+
+/* Optional no-indent class for paragraphs */
+.our-story .no-indent {
+    text-indent: 0; /* Override indentation */
+}
+
+/* List inside story */
+.our-story ul {
+    font-family: 'Lexend', sans-serif;
+    margin: 20px 0;
+    text-align: justify; /* Justify text */
+    text-indent: 0; /* No first-line indent */
+    font-size: 20px;
+    color: #221429;
+}
+
+/* Wrapper for image + text in our story */
+.our-story-wrapper {
+    display: flex;
+    align-items: flex-start; /* Align at top */
+    gap: 40px; /* Space between image and text */
+    max-width: 1125px;
+    margin: 0 auto; /* Center container */
+}
+
+/* Image column inside wrapper */
+.our-story-image {
+    flex: 1; /* Take half space */
+}
+
+/* Image styling */
+.our-story-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Shadow effect */
+}
+
+/* Text column inside wrapper */
+.our-story-text {
+    flex: 1;
+    font-family: 'Lexend', sans-serif;
+    font-size: 20px;
+    color: #221429;
+}
+
+/* Lists inside story text */
+.our-story-text ul {
+    margin-left: 5px; /* Slight indent for bullets */
+    padding-left: 0;
+    list-style-type: disc; /* Standard bullets */
+    margin-right: 5px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 900px) {
+    .our-story-wrapper {
+        flex-direction: column; /* Stack image and text */
+        align-items: center; /* Center horizontally */
+    }
+
+    .our-story-image, .our-story-text {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .our-story-text ul {
+        margin-left: o;
+        text-align: center; /* Center bullets */
+    }
+}
+
+/* Resources */
+/* Scrollable container */
+.resources-container {
+    max-height: 200px;
+    max-width: 900px;
+    overflow-y: auto;
+    background-color: rgb(250, 212, 255);
+    padding: 10px;
+    margin: 20px 200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Shadow effect */
+}
+
+/* Resources list styling */
+.resources li {
+    font-size: 15px;
+    margin-bottom: 5px; /* optional spacing between items */
+    margin: 0 5px;
+    font-family: 'Lexend', sans-serif;
+    text-align: justify;
+    font-size: 15px;
+    color: #221429;
+}
+
+.resources-title {
+    margin-top: 50px;
+}
